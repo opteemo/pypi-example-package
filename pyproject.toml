@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "example-package-opteemo"
+version = "0.1.3"
+license = "MIT"
+description = "A small example package"
+authors = ["Opteemo <contact@opteemo.fr>"]
+readme = "README.md"
+packages = [{ include = "example_package_opteemo" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+opteemo-hello = "example_package_opteemo.cli:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
